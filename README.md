@@ -1,25 +1,15 @@
-# README
+postman Api Colleaction Link
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://www.getpostman.com/collections/f7dd9c2c4d7e00c9fbba
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+API list
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# 011c42a25d7c59d76696
+Get All users: localhost:3000/api/user 
+Get Specific User: localhost:3000/api/user/6072c5f250b1e21f864c0981
+Create user : localhost:3000/api/user -- post method
+Update user : localhost:3000/api/user -- put method
+Delete user : localhost:3000/api/6072c5f250b1e21f864c0981 -- put delete
+typeahead method : http://localhost:3000/api/typeahead/:input  -- [:input] => search value

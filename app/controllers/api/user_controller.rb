@@ -50,9 +50,7 @@ class Api::UserController < ApplicationController
   def typeahead 
     search = params[:input]
     query = "first_name = /.*#{search}.*/ OR last_name = /.*#{search}.*/ OR email = /.*#{search}.*/"
-    # @users = User.where(query)
-    # @users = User.where('$or' => [ { :first_name => /.*#{search}.*/ , :last_name => /.*#{search}.*/, :email => /.*#{search}.*/} ])
-    @users = User.where({:first_name => "/#{search}/i"})
+    @users = User.any_of({ :first_name => /.*#{search}.*/i },{:last_name => /.*#{search}.*/i },{:email => /.*#{search}.*/i })
     render json: @users
   end
   private
